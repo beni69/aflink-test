@@ -32,6 +32,6 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: beni69/artifact-link@e71ca39079605f31a6435605f3930e56594cb7e6
+      - uses: beni69/artifact-link@44b11cfca1388d961c14a7ad89541eba9c3be5a2
         with:
           token: ${{ github.token }}
