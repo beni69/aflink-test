@@ -28,7 +28,10 @@ jobs:
   link:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - uses: beni69/artifact-link@v1.1.0
+      - uses: beni69/artifact-link@ba373a5a9c7265a0038ec702267e4b938c47f1cc
         with:
           token: ${{ github.token }}
