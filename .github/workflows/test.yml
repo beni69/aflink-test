@@ -11,19 +11,19 @@ jobs:
     steps:
       - run: |
           echo "artifact #1" > af1.txt
-          echo "artifact numero duo" > af2.md
+          # echo "artifact numero duo" > af2.md
       - uses: actions/upload-artifact@v4
         name: upload 1
         with:
           name: af1
           path: af1.txt
           if-no-files-found: error
-      - uses: actions/upload-artifact@v4
-        name: upload 2
-        with:
-          name: af2
-          path: af2.md
-          if-no-files-found: error
+      # - uses: actions/upload-artifact@v4
+      #   name: upload 2
+      #   with:
+      #     name: af2
+      #     path: af2.md
+      #     if-no-files-found: error
 
   link:
     needs: build
