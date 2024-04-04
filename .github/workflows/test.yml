@@ -17,16 +17,18 @@ jobs:
         with:
           name: af1
           path: af1.txt
+          if-no-files-found: error
       - uses: actions/upload-artifact@v4
         name: upload 2
         with:
           name: af2
           path: af2.md
+          if-no-files-found: error
 
   link:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: beni69/artifact-link@v1
+      - uses: beni69/artifact-link@ba373a5a9c7265a0038ec702267e4b938c47f1cc
         with:
           token: ${{ github.token }}
